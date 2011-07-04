@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+# vim: sw=2:ts=2:sts=1:ft=ruby:et
+
+dir = File.dirname(File.expand_path(File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__))
+require File.join(dir, 'repo_sync')
+
+RepoSync.sync!
