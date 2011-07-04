@@ -12,7 +12,7 @@ Basically, I use a Redis as a binary semaphore / mutex so that only one of the t
 
 # Warning
 
-`git push --mirror`, which is the core of these hooks, is inherently destructive (it is similar to doing `git push --all --force` as well as performing remote branch deletions. Neither I nor Groupon accept any liability for issues arising due to the use of these scripts. Test this syncing thorougly with a throw-away repository before rolling this out into production.
+`git push --mirror`, which is the core of these hooks, is inherently destructive (it is similar to doing `git push --all --force` as well as performing remote branch deletions). Neither I nor Groupon accept any liability for issues arising due to the use of these scripts. Test this syncing thorougly with a throw-away repository before rolling this out into production.
 
 I've done my best to detect sync failures and prevent further syncing (which could cause data loss) by locking both repos (which requires manual intervention). In my experience, the hooks have been very reliable barring any network issues between the two servers.
 
